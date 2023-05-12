@@ -1,10 +1,16 @@
-import Image from 'next/image';
+// import bcrypt from 'bcryptjs';
 
-export default function Home() {
+import ProductItem from './components/ProductItem';
+import data from './utils/data';
+
+const HomePage = () => {
   return (
-    <>
-      <div>home page</div>
-      <div>hello world</div>
-    </>
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+      {data.products.map((product) => (
+        <ProductItem product={product} key={product.slug} />
+      ))}
+    </div>
   );
-}
+};
+
+export default HomePage;

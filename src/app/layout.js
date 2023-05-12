@@ -1,16 +1,12 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
 import Link from 'next/link';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'ecom-1',
   description:
     'This is an e-commerce site and this is not a great SEO optimized description.',
 };
-
-export default function RootLayout({ children }) {
+const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <div className="flex min-h-screen flex-col justify-between">
@@ -36,4 +32,6 @@ export default function RootLayout({ children }) {
       </div>
     </html>
   );
-}
+};
+
+export default RootLayout;

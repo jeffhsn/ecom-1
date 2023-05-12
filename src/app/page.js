@@ -1,7 +1,7 @@
 // import bcrypt from 'bcryptjs';
 
-import ProductItem from './components/ProductItem';
-import data from './utils/data';
+import ProductItem from '@components/ProductItem';
+import data from '@utils/data';
 
 const HomePage = () => {
   return (

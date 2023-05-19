@@ -1,20 +1,23 @@
-// import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
+
+const password = '12345';
+const saltRounds = 10;
 
 const data = {
-  // users: [
-  //   {
-  //     name: 'John',
-  //     email: 'admin@example.com',
-  //     password: bcrypt.hashSync('123456'),
-  //     isAdmin: true,
-  //   },
-  //   {
-  //     name: 'Jane',
-  //     email: 'user@example.com',
-  //     password: bcrypt.hashSync('123456'),
-  //     isAdmin: false,
-  //   },
-  // ],
+  users: [
+    {
+      name: 'John',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync(password, saltRounds),
+      isAdmin: true,
+    },
+    {
+      name: 'Jane',
+      email: 'user@example.com',
+      password: bcrypt.hashSync(password, saltRounds),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
       name: 'Free Shirt',

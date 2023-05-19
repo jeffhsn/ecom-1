@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Store } from '@utils/Store';
+import { Store } from '@/src/utils/Store';
 import XCircleIcon from '@heroicons/react/24/outline/XCircleIcon';
 
 const CartPage = () => {

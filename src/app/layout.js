@@ -1,7 +1,7 @@
-import '@styles/globals.css';
-import Navbar from '@components/Navbar';
-import { Providers } from '@components/Providers';
-import ClientOnly from '@components/ClientOnly';
+import '@/src/styles/globals.css';
+import Navbar from '@/src/components/Navbar';
+import { Providers } from '@/src/components/Providers';
+import ClientOnly from '@/src/components/ClientOnly';
 
 export const metadata = {
   title: 'ecom-1',

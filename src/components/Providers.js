@@ -2,7 +2,7 @@
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { StoreProvider } from '@utils/Store';
+import { StoreProvider } from '@/src/utils/Store';
 
 export function Providers({ children }) {
   return (

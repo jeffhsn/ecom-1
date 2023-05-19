@@ -10,7 +10,7 @@ const LoginPage = () => {
     formState: { errors },
   } = useForm();
   const submitHandler = ({ email, password }) => {
-    console.log(email, password);
+    console.log('email:', email, '\npassword:', password);
   };
   return (
     <>

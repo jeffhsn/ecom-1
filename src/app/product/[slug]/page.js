@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import data from '@utils/data';
+import data from '@/src/utils/data';
 import { useContext } from 'react';
-import { Store } from '@utils/Store';
+import { Store } from '@/src/utils/Store';
 import { toast } from 'react-toastify';
 
 const ProductPage = ({ params }) => {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useContext, useEffect, useState } from 'react';
-import { Store } from '@utils/Store';
+import { Store } from '@/src/utils/Store';
 import Link from 'next/link';
 
 const Navbar = () => {

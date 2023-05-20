@@ -1,6 +1,6 @@
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 
-const password = '12345';
+const password = '1234567';
 const saltRounds = 10;
 
 const data = {

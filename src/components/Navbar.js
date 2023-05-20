@@ -3,8 +3,10 @@
 import { useContext, useEffect, useState } from 'react';
 import { Store } from '@/src/utils/Store';
 import Link from 'next/link';
+import { useSession } from 'next-auth/react';
 
 const Navbar = () => {
+  const { status, data: session } = useSession();
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
   const [cartItemsCount, setCartItemsCount] = useState(0);
@@ -31,9 +33,15 @@ const Navbar = () => {
             </span>
           )}
         </Link>
-        <Link href="/profile" className="p-2">
-          Profile
-        </Link>
+        {status === 'loading' ? (
+          'Loading'
+        ) : session?.user ? (
+          session.user.name
+        ) : (
+          <Link href="/login" className="p-2">
+            Login
+          </Link>
+        )}
       </div>
     </nav>
   );

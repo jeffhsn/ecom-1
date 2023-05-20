@@ -1,5 +1,3 @@
-// import bcrypt from 'bcryptjs';
-
 import ProductItem from '@/src/components/ProductItem';
 import data from '@/src/utils/data';
 

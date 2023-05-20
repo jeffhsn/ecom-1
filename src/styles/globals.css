@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Link {
+    color: inherit;
+    text-decoration: none;
+    @apply text-blue-600 hover: text-blue-800;
+} */
+
 .card {
     @apply mb-5 block rounded-lg border border-gray-200 shadow-md;
 }
@@ -12,4 +18,8 @@
 
 input, select, textarea {
     @apply rounded border p-2 outline-none ring-indigo-300;
+}
+
+.dropdown-link {
+    @apply flex p-2;
 }

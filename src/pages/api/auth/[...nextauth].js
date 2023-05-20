@@ -4,7 +4,7 @@ import User from '@/src/models/User';
 import db from '@/src/utils/db';
 import bcrypt from 'bcryptjs';
 // import { MongoDBAdapter } from '@next-auth/mongodb-adapter';
-import clientPromise from '@/src/app/libs/mongodb';
+// import clientPromise from '@/src/app/libs/mongodb';
 
 export default NextAuth({
   //   adapter: MongoDBAdapter(clientPromise),

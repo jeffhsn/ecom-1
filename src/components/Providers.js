@@ -1,11 +1,13 @@
 'use client';
 
+import React, { Component } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { StoreProvider } from '@/src/utils/Store';
-import { SessionProvider } from 'next-auth/react';
+import { SessionProvider, useSession } from 'next-auth/react';
+import { redirect, useRouter } from 'next/navigation';
 
-export function Providers({ children, session }) {
+const Providers = ({ children, session }) => {
   return (
     <SessionProvider session={session}>
       <StoreProvider>
@@ -15,8 +17,28 @@ export function Providers({ children, session }) {
           autoClose={3000}
           closeOnClick
         />
+        {/* {Component.auth ? (
+          <AuthProvider>{...children}</AuthProvider>
+        ) : (
+          { ...children }
+        )} */}
+
         {children}
       </StoreProvider>
     </SessionProvider>
   );
-}
+};
+
+// const AuthProvider = ({ children }) => {
+//   const router = useRouter();
+//   const { status } = useSession({
+//     required: true,
+//     onUnauthenticated() {
+//       router.push('/unauthorized?message=login required');
+//     },
+//   });
+//   if (status === 'loading') return <div>Loading...</div>;
+//   return children;
+// };
+
+export default Providers;

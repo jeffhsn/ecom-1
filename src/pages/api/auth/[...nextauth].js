@@ -3,11 +3,8 @@ import CredentialsProviders from 'next-auth/providers/credentials';
 import User from '@/src/models/User';
 import db from '@/src/utils/db';
 import bcrypt from 'bcryptjs';
-// import { MongoDBAdapter } from '@next-auth/mongodb-adapter';
-// import clientPromise from '@/src/app/libs/mongodb';
 
 export default NextAuth({
-  //   adapter: MongoDBAdapter(clientPromise),
   session: { strategy: 'jwt' },
   callbacks: {
     async session(token, user) {
@@ -35,7 +32,6 @@ export default NextAuth({
             _id: user._id,
             email: user.email,
             name: user.name,
-            image: 'f',
             isAdmin: user.isAdmin,
           };
         }
@@ -43,4 +39,9 @@ export default NextAuth({
       },
     }),
   ],
+
+  pages: {
+    signIn: '/login',
+  },
+  secret: process.env.NEXTAUTH_SECRET,
 });

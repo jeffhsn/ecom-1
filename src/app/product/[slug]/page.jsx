@@ -10,7 +10,6 @@ import { toast } from 'react-toastify';
 const ProductPage = ({ params }) => {
   const { state, dispatch } = useContext(Store);
   const { slug } = params;
-  console.log(slug);
   const product = data.products.find(
     (product) => product.slug === slug
   );
@@ -46,7 +45,6 @@ const ProductPage = ({ params }) => {
             alt={product.name}
             width={640}
             height={640}
-            layout="responsive"
           />
         </div>
         <div>

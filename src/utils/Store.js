@@ -10,7 +10,7 @@ const initialState = {
     ? JSON.parse(Cookies.get('cart'))
     : {
         cartItems: [],
-        shippingAddress: { address: {} },
+        shippingAddress: {},
         paymentMethod: '',
       },
 };

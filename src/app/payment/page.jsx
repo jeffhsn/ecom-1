@@ -40,12 +40,12 @@ const PaymentPage = () => {
   };
 
   useEffect(() => {
+    console.log('paymentMethod', selectedPaymentMethod);
     if (!shippingAddress.address) {
       return router.push('/shipping');
     }
 
     setSelectedPaymentMethod(paymentMethod || '');
-    console.log('paymentMethod', paymentMethod);
   }, [paymentMethod, router, shippingAddress.address]);
 
   return (
